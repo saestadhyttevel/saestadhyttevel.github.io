@@ -13,6 +13,7 @@ const innlegg = defineCollection({
   schema: z.object({
     tittel: z.string(),
     forfatter: z.string(),
+    sammendrag: z.string(),
     datoPublisert: z.coerce.date(),
     datoOppdatert: z.coerce.date().optional(),
     kategorier: z.array(z.string()),

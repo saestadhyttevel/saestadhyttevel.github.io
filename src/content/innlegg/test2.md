@@ -2,9 +2,11 @@
 tittel: Årsmøte 2025
 slug: arsmote2025
 forfatter: Styret
-datoPublisert: 18.01.2025
-datoOppdatert: 
-kategorier: ['Årsmøte', 'Styredokumenter']
+sammendrag: Test av sammendrag
+datoPublisert: 2025-01-18
+kategorier:
+  - Årsmøte
+  - Styredokumenter
 ---
 
 # Årsmøte 2025

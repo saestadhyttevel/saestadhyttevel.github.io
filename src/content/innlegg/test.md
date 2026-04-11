@@ -2,9 +2,11 @@
 tittel: Årsmøte 2026
 slug: arsmote2026
 forfatter: Styret
-datoPublisert: 18.01.2026
-datoOppdatert: 
-kategorier: ['Årsmøte', 'Styredokumenter']
+sammendrag: Test av sammendrag
+datoPublisert: 2026-01-18
+kategorier:
+  - Årsmøte
+  - Styredokumenter
 ---
 
 # Årsmøte 2026
