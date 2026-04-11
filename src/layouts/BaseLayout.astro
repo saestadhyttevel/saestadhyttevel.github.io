@@ -1,0 +1,38 @@
+---
+// import '../styles/reset.css';
+// import '../styles/global.css';
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Sæstad Hyttevel',
+  description = 'Nyheter og informasjon for Sæstad Hyttevel',
+} = Astro.props;
+
+const siteName = 'Sæstad Hyttevel';
+const fullTitle = title === siteName ? title : `${title} – ${siteName}`;
+---
+
+<!doctype html>
+<html lang="nb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+
+    <title>{fullTitle}</title>
+
+    <!-- Open Graph (for link previews in iMessage, Slack, etc.) -->
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
