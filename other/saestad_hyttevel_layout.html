@@ -1,0 +1,147 @@
+
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--font-sans); }
+
+  .page {
+    display: grid;
+    grid-template-columns: 55% 45%;
+    min-height: 100vh;
+    background: #f5f0e8;
+  }
+
+  .left {
+    padding: 2.5rem 3rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    overflow-y: auto;
+  }
+
+  .site-title {
+    font-size: 2.2rem;
+    font-weight: 400;
+    letter-spacing: -0.5px;
+    color: #1a1a1a;
+    margin-bottom: 1.2rem;
+    font-family: Georgia, serif;
+  }
+
+  nav {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    border-bottom: none;
+  }
+
+  nav a {
+    font-size: 0.95rem;
+    color: #1a1a1a;
+    text-decoration: none;
+  }
+  nav a.active { font-weight: 700; }
+  nav a:not(.active) { text-decoration: underline; }
+
+  .post-list { display: flex; flex-direction: column; }
+
+  .post-item { padding: 1.5rem 0; }
+
+  .post-item + .post-item {
+    border-top: 1.5px solid #a89f8a;
+  }
+
+  .post-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 0.3rem;
+  }
+
+  .post-meta {
+    font-style: italic;
+    font-weight: 400;
+    color: #555;
+    font-size: 0.95rem;
+  }
+
+  .post-excerpt {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+  }
+
+  .right {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: #4a7c59;
+  }
+
+  .right-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 8px;
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+  }
+
+  .map-icon {
+    width: 48px;
+    height: 48px;
+    opacity: 0.5;
+  }
+
+  .label {
+    display: inline-block;
+    background: rgba(0,0,0,0.12);
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 11px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.6);
+  }
+</style>
+
+<div class="page">
+  <div class="left">
+    <h1 class="site-title">Sæstad Hyttevel</h1>
+    <nav>
+      <a href="#" class="active">Nyheter</a>
+      <a href="#">Kategorier</a>
+      <a href="#">Om og kontakt</a>
+    </nav>
+
+    <div class="post-list">
+      <div class="post-item">
+        <p class="post-title">Innkalling til årsmøte 2026 <span class="post-meta">– Publisert 20.02.26</span></p>
+        <p class="post-excerpt">Retypeset is a static blog theme based on the Astro framework. This guide introduces how to modify theme configuration and create new posts, helping you quickly set up your personal blog. Customize your blog by modifying the configuration f...</p>
+      </div>
+      <div class="post-item">
+        <p class="post-title">Innkalling til årsmøte 2026 <span class="post-meta">– Publisert 20.02.26</span></p>
+        <p class="post-excerpt">Retypeset is a static blog theme based on the Astro framework. This guide introduces how to modify theme configuration and create new posts, helping you quickly set up your personal blog. Customize your blog by modifying the configuration f...</p>
+      </div>
+      <div class="post-item">
+        <p class="post-title">Innkalling til årsmøte 2026 <span class="post-meta">– Publisert 20.02.26</span></p>
+        <p class="post-excerpt">Retypeset is a static blog theme based on the Astro framework. This guide introduces how to modify theme configuration and create new posts, helping you quickly set up your personal blog. Customize your blog by modifying the configuration f...</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="right">
+    <div class="right-placeholder">
+      <svg class="map-icon" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="48" height="48" rx="4" fill="rgba(255,255,255,0.15)"/>
+        <path d="M8 12l12-4 8 4 12-4v28l-12 4-8-4-12 4V12z" stroke="white" stroke-width="1.5" fill="none"/>
+        <path d="M20 8v28M28 12v28" stroke="white" stroke-width="1" stroke-dasharray="3 2"/>
+      </svg>
+      <span class="label">aerial photo · position: sticky</span>
+    </div>
+  </div>
+</div>

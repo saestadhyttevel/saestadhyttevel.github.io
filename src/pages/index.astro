@@ -1,14 +1,9 @@
 ---
-// src/pages/index.astro
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PostPreview from '../components/PostPreview.astro';
-import { getCollection } from 'astro:content';
 
 import Image from 'astro/components/Image.astro';
 import flyfoto from '../images/flyfoto.jpg';
-
-const innlegg = await getCollection('innlegg');
-const sorted = innlegg.sort((a, b) => b.data.datoPublisert - a.data.datoPublisert);
 ---
 
 <BaseLayout>
@@ -24,16 +19,13 @@ const sorted = innlegg.sort((a, b) => b.data.datoPublisert - a.data.datoPubliser
       </header>
 
       <ul class="post-list">
-        {sorted.map(innlegg => (
-          <li>
-            <PostPreview innlegg={innlegg} />
-          </li>
-        ))}
+		<PostPreview />
       </ul>
+	  
     </main>
 
     <figure class="right" aria-hidden="true">
-		<Image src={flyfoto} alt="" layout="intrinsic" width={800} height={600} />
+		<Image src={flyfoto} alt=""/>
     </figure>
   </div>
 </BaseLayout>
